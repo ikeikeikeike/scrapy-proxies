@@ -80,7 +80,7 @@ class RetryChangeProxyMiddleware(retry.RetryMiddleware):
         tn = telnetlib.Telnet('127.0.0.1', 9051)
 
         tn.read_until("Escape character is '^]'.", 2)
-        tn.write('AUTHENTICATE "267765"\r\n')
+        tn.write('AUTHENTICATE "8127492"\r\n')
 
         tn.read_until("250 OK", 2)
         tn.write("signal NEWNYM\r\n")
